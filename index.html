@@ -34,15 +34,26 @@
             width: 100%;
             height: calc(100vh - 80px);
             padding: 20px;
+            overflow: hidden;
+        }
+
+        .iframe-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: white;
         }
 
         iframe {
             width: 100%;
-            height: 100%;
+            height: calc(100% + 45px);
             border: none;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
@@ -51,7 +62,9 @@
         <h1>Mapleton City Fire Department</h1>
     </header>
     <div class="container">
-        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQy4piRlD9u7TcuLSq7nCDLMPuqcC4FP3X4v0OF5G23QeVVQD_uoGp_JdxrY2Tmgng1AxuM9bVfrjoq/pubhtml?gid=1341408958&single=true"></iframe>
+        <div class="iframe-wrapper">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQy4piRlD9u7TcuLSq7nCDLMPuqcC4FP3X4v0OF5G23QeVVQD_uoGp_JdxrY2Tmgng1AxuM9bVfrjoq/pubhtml?gid=1341408958&single=true&widget=true&chrome=false&headers=false"></iframe>
+        </div>
     </div>
 </body>
 </html>
